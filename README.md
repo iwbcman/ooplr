@@ -18,36 +18,38 @@ particularly feedback which explains why it is bad to do something this way, or 
 it better. 
 
 This is the Htmlgenerator I used stripped down for simplicity and legibility, please feel free to point out why I shouldn't 
-make use of such :
-
-class Htmlgenerator {
-public function __invoke($items) {
-    foreach($items as $item) {
-    echo $item;
-    }
-}
-  function __construct() {
-    echo "<html><head><title>Major cool</title><body>";
-  // here you stick whatever css you need for styling
-  }
-  function __destruct() {
-    echo "</body></html>";
-  }
-}
-
-all one has to do to use this is:
-$h = new Htmlgenerator();
-$t = array();
-$t[] = "write someto the page";
-$t[] = "<strong> even html tags </strong>";
-$t[] = "or more complicated<a href=process.php?id={$userid}>stuff</a>";
+make use of such : <br>
+<strong>
+    <p>class Htmlgenerator { </p>
+<p> public function __invoke($items) { </p>
+<p>    foreach($items as $item) { </p>
+<p>    echo $item; </p>
+<p>    } </p>
+<p>}
+<p>  function __construct() { </p>
+<p>    echo "<html><head><title>Major cool</title><body>"; </p>
+<p>  // here you stick whatever css you need for styling </p>
+<p>  } </p>
+<p>  function __destruct() { </p>
+<p>    echo "</body></html>"; </p>
+<p>  } </p>
+<p> } </p>
+    </strong>
+<br>
+all one has to do to use this is:<br>
+<p>$h = new Htmlgenerator();</p>
+<p>$t = array();</p>
+<p>$t[] = "write someto the page";</p>
+<p>$t[] = "<strong> even html tags </strong>";</p>
+<p>$t[] = "or more complicated<a href=process.php?id={$userid}>stuff</a>";</p>
+<br>
 once in a blue moon you might need to use the dreaded \" '" . "' \" bs but extremely rarely. 
 
 I need to get around to properly including a licesne file but for now this code is GPL V2 or later.(that is 
 unless someone from codecourse objects).
 
 Karl Zollner
-iwbcman<at>gmail.com
+iwbcman\<a\t>gmail.com
 
 
 
