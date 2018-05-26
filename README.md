@@ -43,6 +43,8 @@ all one has to do to use this is:<br>
 <p>$t[] = "<strong> even html tags </strong>";</p>
 <p>$t[] = "or more complicated<a href=process.php?id={$userid}>stuff</a>";</p>
 <br>
+LOL, don't you love HTML!, the last example there was mangled beyond recognition...
+
 once in a blue moon you might need to use the dreaded \" '" . "' \" bs but extremely rarely. 
 
 I need to get around to properly including a licesne file but for now this code is GPL V2 or later.(that is 
