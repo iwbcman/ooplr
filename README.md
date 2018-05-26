@@ -44,6 +44,8 @@ all one has to do to use this is:<br>
 <p>$t[] = "or more complicated<a href=process.php?id={$userid}>stuff</a>";</p>
 <br>
 LOL, don't you love HTML!, the last example there was mangled beyond recognition...
+Simply look at the raw text of this file to actually see this stuff, my attempts to show you code have utterly failed
+due to html manglining.....
 
 once in a blue moon you might need to use the dreaded \" '" . "' \" bs but extremely rarely. 
 
