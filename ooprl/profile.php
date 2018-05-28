@@ -2,7 +2,7 @@
 require_once 'core/init.php';
 $whoami = new User;
 if(!$whoami->isLoggedIn()) {
-    Redirect::to(405);
+    Redirect::to(403);
 }
 //var_dump_pre($whoami);
 $whoamidata = $whoami->data();

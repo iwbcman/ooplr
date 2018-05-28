@@ -10,7 +10,7 @@ if ($user->hasPermission('admin')) {
     $t0[] = "Alright, you are logged in as admin so you have a right to be here. ";
     $h($t0);
 } else {
-    Redirect::to('405');
+    Redirect::to('403');
 }
 echo Config::get('mysql/host'); // '127.0.0.1'
 if (Input::exists()) {

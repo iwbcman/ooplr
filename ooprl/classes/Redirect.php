@@ -10,14 +10,14 @@ class Redirect {
                         exit();
                         break;
                 
-                    case 405:
-                      header('HTTP/1.0 404 Not found');
-                       include 'includes/errors/405.php';
+                    case 403:
+                      header('HTTP/1.0 403 Access Forbidden');
+                       include 'includes/errors/403.php';
                        exit();
                        break;
                     
                     case 406:
-                        header('HTTP/1.0 404 Not found');
+                        header('HTTP/1.0 403 Not found');
                         include 'includes/errors/406.php';
                         exit();
                         break;
