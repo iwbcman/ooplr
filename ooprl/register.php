@@ -1,6 +1,6 @@
 <?php
 require_once 'core/init.php';
-    
+$h = new Htmlgenerator(array('title' => 'Register New User', 'csshref' => 'css/style.css'));
 //var_dump_pre(Token::check(Input::get('token')));
 
 if(Input::exists()) {
@@ -51,7 +51,7 @@ if(Input::exists()) {
             }
           
             } else {
-            $h1 = new Htmlgenerator();
+            //$h1 = new Htmlgenerator();
             
             foreach ($validation->errors() as $error) {
                     $t2 = array();
@@ -63,7 +63,7 @@ if(Input::exists()) {
     }
 }
 
-$h = new Htmlgenerator();
+//$h = new Htmlgenerator();
 $t = array();
 $t[] = "<h1>User Registration</h1>";
 $t[] = "<form  action='' method ='post'>";

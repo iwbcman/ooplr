@@ -1,6 +1,6 @@
 <?php
 require_once 'core/init.php';
-//new Token();
+$h = new Htmlgenerator(array('title' => 'Login User', 'csshref' => 'css/style.css'));
 if(Input::exists()){
     if (Token::check(Input::get('token'))) {
         $validate = new Validate();
@@ -25,7 +25,7 @@ if(Input::exists()){
             }
             
         } else {
-            $h1 = new Htmlgenerator();
+            //$h1 = new Htmlgenerator();
             foreach ($validation->errors() as $error) {
                 $t2 = array();
                 $t2[] .= "<h3>$error</h3>";
@@ -35,7 +35,7 @@ if(Input::exists()){
         }
     }
 }
-$h = new Htmlgenerator();
+//$h = new Htmlgenerator();
 $t = array ('');
 
 $t[] ="<div class='dark'>";

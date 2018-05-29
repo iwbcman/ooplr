@@ -1,12 +1,13 @@
 <?php
 require_once 'core/init.php';
+$h = new Htmlgenerator(array('title' => 'Home', 'csshref' => 'css/style.css'));
 if (Session::exists('home')) {
     echo '<p>' . Session::flash('home') . '</p>' ;
     echo Session::flash('success');
 }
 
 $user = new User();
-$h = new Htmlgenerator();
+//$h = new Htmlgenerator();
 $t = array();
 if($user->isLoggedIn()) {
     //echo $user->data()->username;

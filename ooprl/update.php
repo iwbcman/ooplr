@@ -1,5 +1,6 @@
 <?php
 require_once 'core/init.php';
+$h = new Htmlgenerator(array('title' => 'Update User Profile', 'csshref' => 'css/style.css'));
 $user = new User();
 if(!$user->isLoggedIn()) {
     Redirect::to('index.php');
@@ -35,7 +36,7 @@ if (Input::exists()) {
             )
     ));
     if($validation->passed()) {
-        $h1 = new Htmlgenerator();
+        //$h1 = new Htmlgenerator();
         $t1 = array();
         $user = new User();
       try {
@@ -51,7 +52,7 @@ if (Input::exists()) {
         }
         
         } else {
-            $h1 = new Htmlgenerator();
+            //$h1 = new Htmlgenerator();
             
             foreach ($validation->errors() as $error) {
                 $t2 = array();
@@ -63,7 +64,7 @@ if (Input::exists()) {
     }
 }
 
-$h = new Htmlgenerator();
+//$h = new Htmlgenerator();
 $t = array();
 $data = $user->data();
 $cnm = $data->name;

@@ -1,5 +1,6 @@
 <?php
 require_once 'core/init.php';
+$h = new Htmlgenerator(array('title' => 'User Profile', 'csshref' => 'css/style.css'));
 $whoami = new User;
 if(!$whoami->isLoggedIn()) {
     Redirect::to(403);
@@ -17,7 +18,7 @@ if (!$username = Input::get('user')) {
         if(!$user->exists()) {
         Redirect::to(404);
     } else {
-        $h = new Htmlgenerator();
+        //$h = new Htmlgenerator();
         $t = array();
         $t[] = "<h1>" . escape($data->username) . '\'s' . " profile: </h1>";
         $t[] = "<h2>User ID:       " . escape($data->id) ."</h2>";
