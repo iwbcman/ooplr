@@ -7,13 +7,9 @@ class Htmlgenerator {
         }
     }
     public function __construct($data = null) {
-        if ($data) {
-        extract($data);
+                extract($data);
         echo "<!DOCTYPE html><html><head><meta charset=utf-8><meta action=viewport width=device-width><meta name=description content=Something About This Website><title>$title</title><link rel=stylesheet type=text/css href=$csshref></head><body>";
-        } else {
-        echo "<!DOCTYPE html><html><head><meta charset=utf-8><meta action=viewport width=device-width><meta name=description content=Something About This Website></head><body>";
-        }
-	
+        	
     }
     function __destruct() {
         echo "</body></html>";
