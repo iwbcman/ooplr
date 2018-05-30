@@ -47,7 +47,7 @@ class Htmlgenerator {
 
 <br>
 all one has to do to use this is:<br>
-<p>$h = new Htmlgenerator();</p>
+<p>$h = new Htmlgenerator(array('title', 'place page title here');</p>
 <p>$t = array();</p>
 <p>$t[] = "write someto the page";</p>
 <p>$t[] = "<strong> even html tags </strong>";</p>
