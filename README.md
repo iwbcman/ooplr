@@ -20,21 +20,31 @@ it better.
 This is the Htmlgenerator I used stripped down for simplicity and legibility, please feel free to point out why I shouldn't 
 make use of such : <br>
 <strong>
-    <p>class Htmlgenerator { </p>
-<p> public function __invoke($items) { </p>
-<p>    foreach($items as $item) { </p>
-<p>    echo $item; </p>
-<p>    } </p>
-<p>}
-<p>  function __construct() { </p>
-<p>    echo "<html><head><title>Major cool</title><body>"; </p>
-<p>  // here you stick whatever css you need for styling </p>
-<p>  } </p>
-<p>  function __destruct() { </p>
-<p>    echo "</body></html>"; </p>
-<p>  } </p>
-<p> } </p>
-    </strong>
+class Htmlgenerator {
+    
+    public function __invoke  ($items)
+    
+    {
+        foreach($items as $item) 
+        
+        {
+            echo $item;
+        }
+    }
+    public function __construct($data = null) 
+    
+    {
+                extract($data);
+                
+        echo &quot;&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta action=viewport width=device-width&gt;&lt;meta name=description content=Something About This Website&gt;&lt;title&gt;$title&lt;/title&gt;&lt;link rel=stylesheet type=text/css href=$csshref&gt;&lt;/head&gt;&lt;body&gt;&quot;;
+        	
+    }
+    
+    function __destruct() {
+        echo &quot;&lt;/body&gt;&lt;/html&gt;&quot;;
+    }
+}
+
 <br>
 all one has to do to use this is:<br>
 <p>$h = new Htmlgenerator();</p>
@@ -54,6 +64,8 @@ unless someone from codecourse objects).
 
 Karl Zollner
 iwbcman\<a\t>gmail.com
+
+
 
 
 
