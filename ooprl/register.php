@@ -56,7 +56,7 @@ if(Input::exists()) {
             foreach ($validation->errors() as $error) {
                     $t2 = array();
                     $t2[] .= "<h3>$error</h3>";
-                    $h1($t2);
+                    $h($t2);
                     unset($t2);
             }
         }
