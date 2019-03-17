@@ -1,5 +1,19 @@
 <?php
 session_start();
+/**
+ * 
+ * This file is being kept here for historical reasons even though it is now unused.
+ * Since we do not wish to have credentials stored in publicly accessible files, 
+ * the *actual* init.php file is now located in the root directory, above public/, 
+ * rendering it inaccessible to the public via the .htaccess file also located in 
+ * the root directory. Given that the *actual* init.sql is not included in this
+ * git repository(https://github.com/iwbcman/ooplr.git), If you wish to get this code
+ * up and running simply link ooplr/ooplr (notice the double directory structure) to 
+ * your publicly accessible directory public/, public_html/, or whichever directory
+ * you have configured for public access. Once the link has been created copy 
+ * core/init.php to '../../', ie. the root directory of your virtual server and modify 
+ * it according to the site specifics(host, username, password etc.) 
+ */
 $GLOBALS['config'] = $arrayName = array(
         'mysql' => array(
                 'host' => '127.0.0.1',

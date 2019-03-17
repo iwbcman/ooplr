@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '../../init.php';
 $h = new Htmlgenerator(array('title' => 'Login User', 'csshref' => 'css/style.css'));
 if(Input::exists()){
     if (Token::check(Input::get('token'))) {

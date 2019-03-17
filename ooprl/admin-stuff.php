@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '../../init.php';
 $h = new Htmlgenerator(array('title' => 'Administrator Tools', 'csshref' => 'css/adminstyle.css'));
 $user = new User();
 if(!$user->isLoggedIn()) {

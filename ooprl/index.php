@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '../../init.php';
 $h = new Htmlgenerator(array('title' => 'Home', 'csshref' => 'css/style.css'));
 if (Session::exists('home')) {
     echo '<p>' . Session::flash('home') . '</p>' ;

@@ -1,5 +1,5 @@
 <?php
-require_once 'core/init.php';
+require_once '../../init.php';
 $h = new Htmlgenerator(array('title' => 'Register New User', 'csshref' => 'css/style.css'));
 //var_dump_pre(Token::check(Input::get('token')));
 
